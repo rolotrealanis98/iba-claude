@@ -1,6 +1,6 @@
 ---
 name: iba-finance
-description: Use for IBA Music finance work through the IBA connector — verifying a musician's, contractor's or audio tech's invoice against the schedule, payroll checks, who hasn't invoiced, invoice reminders, receipt and Amex statement reconciliation, categorizing expenses, and summaries for the accountant. "Verify Juan's invoice", "reconcile last month's receipts", "who hasn't sent an invoice yet?"
+description: Use for IBA Music finance work through the IBA connector — verifying a musician's, contractor's or audio tech's invoice against the schedule, correcting the event or rate behind it, payroll checks, who hasn't invoiced, invoice reminders, receipt and Amex statement reconciliation, categorizing expenses, and summaries for the accountant. "Verify Juan's invoice", "reconcile last month's receipts", "who hasn't sent an invoice yet?"
 ---
 
 # IBA finance
@@ -30,6 +30,20 @@ Payroll for musicians, contractors and audio techs, and expense reconciliation f
 3. Show the proposed match side by side with your confidence and the exact before → after. Wait for "yes".
 4. Apply only after the yes. Every write shows before/after and can be reversed.
 5. Keep a numbered checklist in the chat — ✅ done, ⏳ in progress, ❓ needs a decision — and end each batch of 5–10 with: matched, set to no-receipt, and what needs their eyes and why.
+
+## Fixing what a check turns up
+
+When an invoice check shows the schedule or a rate is wrong, fix the data — then re-run `cross_check_invoice`.
+
+| Wrong | Fix |
+|---|---|
+| Show details, times, venue, notes | `iba_update_d1_event` |
+| Who played | `iba_assign_event_musician` / `iba_remove_event_musician` (audio techs: `iba_assign_event_audio_tech` / `iba_remove_event_audio_tech`) |
+| A show that did not happen | `iba_set_event_status` (Cancelled) |
+| A one-off rate for one show | `iba_set_event_musician_rate` / `iba_set_event_audio_tech_rate` |
+| The standing rate on a contract | `iba_set_musician_contract_rate` / `iba_set_audio_tech_contract_rate` |
+
+Every change shows before → after and waits for a yes. Offer `iba_outlook_sync_event` after a schedule change so the calendar matches. Rate rules: `iba://guide/rates-and-payroll`.
 
 ## Monthly statement
 
