@@ -12,7 +12,7 @@
     {
       "name": "iba",
       "description": "The IBA connector (mcp.ibamusic.com) and the finance and operations playbooks.",
-      "version": "1.0.118",
+      "version": "1.0.120",
       "author": {
         "name": "IBA Music",
         "url": "https://ibamusic.com"

@@ -11,7 +11,7 @@ IBA Music's data lives behind one connector, `https://mcp.ibamusic.com/mcp`. Eac
 
 1. `whoami` — who you are to the connector: role, access tier, write grants, focus.
 2. Read the resource `iba://guide/my-role` — the playbook for that person's job.
-3. Offer the guided prompts the connector lists for their focus (finance or operations).
+3. Offer the guided prompts the connector lists for their focus (finance, operations or executive).
 
 Never assume what someone may change: the grants `whoami` reports are the only source.
 
