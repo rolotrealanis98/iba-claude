@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "iba",
+  "metadata": {
+    "description": "IBA Music for Claude: the IBA connector plus the team's finance and operations playbooks."
+  },
+  "owner": {
+    "name": "IBA Music",
+    "url": "https://ibamusic.com"
+  },
+  "plugins": [
+    {
+      "name": "iba",
+      "description": "The IBA connector (mcp.ibamusic.com) and the finance and operations playbooks.",
+      "version": "1.0.116",
+      "author": {
+        "name": "IBA Music",
+        "url": "https://ibamusic.com"
+      },
+      "source": "./plugins/iba",
+      "category": "productivity",
+      "tags": [
+        "mcp",
+        "iba-music",
+        "payroll",
+        "scheduling"
+      ],
+      "homepage": "https://github.com/rolotrealanis98/iba-claude"
+    }
+  ]
+}

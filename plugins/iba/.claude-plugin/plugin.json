@@ -1,0 +1,28 @@
+{
+  "name": "iba",
+  "displayName": "IBA Music",
+  "version": "1.0.116",
+  "description": "IBA Music operations: the IBA connector (mcp.ibamusic.com, sign in with your @ibamusic.com Microsoft account) plus the finance and operations playbooks — payroll and invoice checks, receipt reconciliation, schedules, rosters and Disney booking ingest.",
+  "author": {
+    "name": "IBA Music",
+    "url": "https://ibamusic.com"
+  },
+  "homepage": "https://github.com/rolotrealanis98/iba-claude",
+  "repository": "https://github.com/rolotrealanis98/iba-claude",
+  "license": "UNLICENSED",
+  "keywords": [
+    "mcp",
+    "iba-music",
+    "payroll",
+    "reconciliation",
+    "scheduling",
+    "operations"
+  ],
+  "mcpServers": {
+    "iba": {
+      "type": "http",
+      "url": "https://mcp.ibamusic.com/mcp"
+    }
+  },
+  "skills": "./skills/"
+}
